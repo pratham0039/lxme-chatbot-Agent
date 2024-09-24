@@ -35,13 +35,13 @@ RSpec.describe Integrations::Openai::ProcessorService do
 
       it 'returns the rephrased message using the tone in data' do
         request_body = {
-          'model' => 'gpt-4o-mini',
+          'model' => 'ft:gpt-4o-2024-08-06:kansha::A9shP940',
           'messages' => [
             {
               'role' => 'system',
-              'content' => 'You are a helpful support agent. ' \
+              'content' => 
                            'Please rephrase the following response. ' \
-                           'Ensure that the reply should be in user language.'
+                           
             },
             { 'role' => 'user', 'content' => event['data']['content'] }
           ]
